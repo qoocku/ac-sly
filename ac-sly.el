@@ -1,25 +1,21 @@
 ;;; ac-sly.el --- An auto-complete source using sly completions
-;;;
-;;; Original Author: Steve Purcell <steve@sanityinc.com>
-;;; URL: https://github.com/purcell/ac-slime
-;;; Version: DEV
-;;;
-;;; SLY Translation Author: Damian T. Dobroczy\\'nski <qoocku@gmail.com>
-;;; URL: https://github.com/qoocku/ac-sly
-;;; Version: DEV
 ;;
-;;; Commentary: This is direct translation of ac-slime module replacing
-;;;             "slime" with "sly". That's it.
-
+;; Author: Damian T. Dobroczy\\'nski <qoocku@gmail.com>
+;; URL: https://github.com/qoocku/ac-sly
+;; Version: DEV
+;; Package-Requires: (sly auto-complete cl)
+;;
+;; Commentary: This is direct translation of ac-slime module replacing
+;;             "slime" with "sly". That's it.
+;;             Original Author - Steve Purcell <steve@sanityinc.com>
+;;             URL - https://github.com/purcell/ac-slime
+;;             Version - DEV
 ;; Usage:
-
 ;;     (require 'ac-sly)
 ;;     (add-hook 'sly-mode-hook 'set-up-sly-ac)
 ;;     (add-hook 'sly-repl-mode-hook 'set-up-sly-ac)
 ;;     (eval-after-load "auto-complete"
 ;;       '(add-to-list 'ac-modes 'sly-repl-mode))
-;;
-
 ;;; Code:
 
 (require 'cl)
