@@ -3,7 +3,7 @@
 ;; Author: Damian T. Dobroczy\\'nski <qoocku@gmail.com>
 ;; URL: https://github.com/qoocku/ac-sly
 ;; Version: DEV
-;; Package-Requires: (sly auto-complete cl)
+;; Package-Requires: (sly auto-complete)
 ;;
 ;; Commentary: This is direct translation of ac-slime module replacing
 ;;             "slime" with "sly". That's it.
