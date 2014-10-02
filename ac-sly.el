@@ -1,15 +1,17 @@
 ;;; ac-sly.el --- An auto-complete source using sly completions
 ;;
-;; Author: Damian T. Dobroczy\\'nski <qoocku@gmail.com>
+;; Author: Damian T. Dobroczy\'nski <qoocku@gmail.com>
 ;; URL: https://github.com/qoocku/ac-sly
 ;; Version: DEV
-;; Package-Requires: (sly auto-complete)
+;; Package-Requires: ((sly "20140930") (auto-complete "201408"))
 ;;
-;; Commentary: This is direct translation of ac-slime module replacing
-;;             "slime" with "sly". That's it.
-;;             Original Author - Steve Purcell <steve@sanityinc.com>
-;;             URL - https://github.com/purcell/ac-slime
-;;             Version - DEV
+;; Commentary:
+;; This is direct translation of ac-slime module replacing
+;; "slime" with "sly". That's it.
+;; Original Author - Steve Purcell <steve@sanityinc.com>
+;; URL - https://github.com/purcell/ac-slime
+;; Version - DEV
+;;
 ;; Usage:
 ;;     (require 'ac-sly)
 ;;     (add-hook 'sly-mode-hook 'set-up-sly-ac)
@@ -18,7 +20,7 @@
 ;;       '(add-to-list 'ac-modes 'sly-repl-mode))
 ;;; Code:
 
-(require 'cl)
+(require 'cl-lib)
 (require 'sly)
 (require 'auto-complete)
 
@@ -51,7 +53,7 @@
 (defun ac-source-sly-case-correcting-completions (name collection)
   (mapcar #'(lambda (completion)
               ;; FIXME
-              (replace completion name))
+              (cl-replace completion name))
           (all-completions (downcase name) collection)))
 
 (defvar ac-sly-current-doc nil "Holds slime docstring for current symbol.")
