@@ -7,7 +7,7 @@ excellent [ac-slime](https://github.com/purcell/ac-slime "ac-slime") module wher
 ## Setup
 
 Install via [MELPA](http://melpa.org/#/ac-sly), or alternatively do 
-the following in your `~/.emacs` or `~/.emacs.d/init/el` init file.
+the following in your `~/.emacs` or `~/.emacs.d/init.el` init file.
 
 ```elisp
 (add-to-list 'load-path "/path/to/ac-sly")
